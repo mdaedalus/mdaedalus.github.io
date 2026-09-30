@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emin Neşat Gürses — Portfolio</title>
+  <style>
+    /* --- RESET & BASE --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555555;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e5e5e5;
+      --tag-bg: #f0f0f0;
+      --radius: 10px;
+      --max-width: 720px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 1.25rem;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    /* --- LANGUAGE SWITCH --- */
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .lang-switch button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+      font-family: var(--font);
+    }
+
+    .lang-switch button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .lang-switch button:hover:not(.active) {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* --- HERO --- */
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero .tagline {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero .location {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero .location svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* --- ABOUT --- */
+    .about p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* --- SKILLS --- */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .skills-list li {
+      background: var(--tag-bg);
+      border-radius: 20px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    /* --- EXPERIENCE --- */
+    .exp-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+    }
+
+    .exp-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+
+    .exp-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .exp-content h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .exp-content .org {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .exp-content .dates {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 0.15rem;
+    }
+
+    .exp-content .desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.3rem;
+    }
+
+    /* --- PROJECTS --- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+    }
+
+    .project-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .project-card p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .project-card .lang-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(37, 99, 235, 0.08);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+      align-self: flex-start;
+    }
+
+    /* --- CONTACT --- */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.92rem;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-links a:last-child {
+      border-bottom: none;
+    }
+
+    .contact-links a:hover {
+      color: var(--accent);
+    }
+
+    .contact-links a svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 480px) {
+      body {
+        padding: 0 1rem;
+      }
+
+      .container {
+        padding: 2rem 0 3rem;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .exp-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* --- UTIL --- */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LANGUAGE SWITCH -->
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button id="btn-tr" class="active" onclick="setLang('tr')">TR</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+      <h1>Emin Neşat Gürses</h1>
+      <p class="tagline" data-tr="Yazılım Geliştirici · Yapay Zeka, Veri Madenciliği & Kuantum" data-en="Software Developer · AI, Data Mining & Quantum">Yazılım Geliştirici · Yapay Zeka, Veri Madenciliği & Kuantum</p>
+      <p class="location">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-tr="Gümüşhane, Türkiye" data-en="Gümüşhane, Türkiye">Gümüşhane, Türkiye</span>
+      </p>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2 data-tr="Hakkımda" data-en="About">Hakkımda</h2>
+      <p data-tr="Yapay zeka, veri madenciliği ve kuantum bilişim tutkunu. Tabip'in kurucusu — yapay zeka destekli bir sağlık teknolojisi projesi. Microsoft Learn Student Ambassador & T3 AI'LE gönüllüsü. Sadece kod yazmıyorum; arkasındaki bilimi anlamaya çalışıyorum. Disiplinler arası problem çözmeye ve yaşam boyu öğrenmeye tutkuluyum. En iyi çözümlerin birlikte öğrenip birlikte ürettiğimizde ortaya çıktığına inanıyorum."
+         data-en="AI, data mining, and quantum computing enthusiast. Founder of Tabip — an AI-powered health-tech project. Microsoft Learn Student Ambassador & T3 AI'LE Volunteer. I don't just write code; I strive to understand the science behind it. Passionate about interdisciplinary problem-solving and lifelong learning. I believe the best solutions emerge when we learn and build together.">
+        Yapay zeka, veri madenciliği ve kuantum bilişim tutkunu. Tabip'in kurucusu — yapay zeka destekli bir sağlık teknolojisi projesi. Microsoft Learn Student Ambassador & T3 AI'LE gönüllüsü. Sadece kod yazmıyorum; arkasındaki bilimi anlamaya çalışıyorum. Disiplinler arası problem çözmeye ve yaşam boyu öğrenmeye tutkuluyum. En iyi çözümlerin birlikte öğrenip birlikte ürettiğimizde ortaya çıktığına inanıyorum.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2 data-tr="Yetenekler" data-en="Skills">Yetenekler</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>Yapay Zeka / AI</li>
+        <li>Veri Madenciliği</li>
+        <li>Kuantum Bilişim</li>
+        <li>Flask</li>
+        <li>Node.js</li>
+        <li>PyTorch</li>
+        <li>OpenCV</li>
+        <li>MongoDB</li>
+        <li>Veri Analitiği</li>
+        <li>REST API</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2 data-tr="Deneyim" data-en="Experience">Deneyim</h2>
+
+      <div class="exp-item">
+        <div class="exp-icon">T</div>
+        <div class="exp-content">
+          <h3 data-tr="Kurucu" data-en="Founder">Kurucu</h3>
+          <p class="org">Tabip</p>
+          <p class="dates">2025 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
+          <p class="desc" data-tr="Yapay zeka destekli sağlık teknolojisi projesi. Sentetik klinik veri setleri, API ve açık kaynak araçlar." data-en="AI-powered health-tech project. Synthetic clinical datasets, API, and open-source tools.">Yapay zeka destekli sağlık teknolojisi projesi. Sentetik klinik veri setleri, API ve açık kaynak araçlar.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-icon">T3</div>
+        <div class="exp-content">
+          <h3 data-tr="Topluluk Gönüllüsü" data-en="Community Volunteer">Topluluk Gönüllüsü</h3>
+          <p class="org">T3 AI'LE</p>
+          <p class="dates">Şub 2024 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
+          <p class="desc" data-tr="Yapay Zeka ve Veri Madenciliği alanında gönüllü çalışmalar." data-en="Volunteer work in AI and Data Mining.">Yapay Zeka ve Veri Madenciliği alanında gönüllü çalışmalar.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-icon">T3</div>
+        <div class="exp-content">
+          <h3 data-tr="Gönüllü" data-en="Volunteer">Gönüllü</h3>
+          <p class="org">T3 Vakfı</p>
+          <p class="dates">Haz 2023 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-icon">MS</div>
+        <div class="exp-content">
+          <h3 data-tr="Öğrenci Elçisi" data-en="Student Ambassador">Öğrenci Elçisi</h3>
+          <p class="org">Microsoft Learn Student Ambassadors</p>
+          <p class="dates">Eyl 2024 — Tem 2025</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-icon">PY</div>
+        <div class="exp-content">
+          <h3 data-tr="Geliştirme Gönüllüsü" data-en="Development Volunteer">Geliştirme Gönüllüsü</h3>
+          <p class="org">Python Developer</p>
+          <p class="dates">Mar 2020 — May 2021</p>
+          <p class="desc" data-tr="Yazılım Geliştirme ve Yapay Zeka." data-en="Software Development and AI.">Yazılım Geliştirme ve Yapay Zeka.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2 data-tr="Projeler" data-en="Projects">Projeler</h2>
+      <div class="projects-grid">
+
+        <a href="https://github.com/mdaedalus/Earthquake-api" target="_blank" rel="noopener" class="project-card">
+          <h3>Earthquake API</h3>
+          <p data-tr="İki büyük Türk kaynağından deprem verilerini toplayan gerçek zamanlı Flask API." data-en="Real-time Flask API aggregating earthquake data from two major Turkish sources.">İki büyük Türk kaynağından deprem verilerini toplayan gerçek zamanlı Flask API.</p>
+          <span class="lang-badge">Python</span>
+        </a>
+
+        <a href="https://github.com/mdaedalus/Fault-Lines-Api" target="_blank" rel="noopener" class="project-card">
+          <h3>Fault Lines API</h3>
+          <p data-tr="Jeolojik plaka ve fay zonu verilerini GeoJSON formatında sunan hafif Flask API." data-en="Lightweight Flask geospatial API serving geological plate and fault zone data in GeoJSON.">Jeolojik plaka ve fay zonu verilerini GeoJSON formatında sunan hafif Flask API.</p>
+          <span class="lang-badge">Python</span>
+        </a>
+
+        <a href="https://github.com/mdaedalus/ejs-blog" target="_blank" rel="noopener" class="project-card">
+          <h3>EJS Blog</h3>
+          <p data-tr="Node.js, Express, EJS ve MongoDB ile geliştirilmiş tam özellikli blog platformu." data-en="Full-featured blog platform built with Node.js, Express, EJS, and MongoDB.">Node.js, Express, EJS ve MongoDB ile geliştirilmiş tam özellikli blog platformu.</p>
+          <span class="lang-badge">EJS</span>
+        </a>
+
+        <a href="https://github.com/mdaedalus/Neural-Networks-with-Python-and-Pytorch" target="_blank" rel="noopener" class="project-card">
+          <h3>Neural Networks</h3>
+          <p data-tr="PyTorch ile MNIST veri seti üzerinde el yazısı rakam sınıflandırması." data-en="Handwritten digit classification on MNIST dataset using PyTorch.">PyTorch ile MNIST veri seti üzerinde el yazısı rakam sınıflandırması.</p>
+          <span class="lang-badge">Python</span>
+        </a>
+
+        <a href="https://github.com/mdaedalus/Python-Blockchain" target="_blank" rel="noopener" class="project-card">
+          <h3>Python Blockchain</h3>
+          <p data-tr="Python ile yazılmış basit ve açıklayıcı bir blockchain prototipi." data-en="Simple yet illustrative blockchain prototype written in Python.">Python ile yazılmış basit ve açıklayıcı bir blockchain prototipi.</p>
+          <span class="lang-badge">Python</span>
+        </a>
+
+        <a href="https://github.com/mdaedalus/FivemApi" target="_blank" rel="noopener" class="project-card">
+          <h3>FiveM API</h3>
+          <p data-tr="FiveM sunucularıyla etkileşim için basit Node.js kütüphanesi." data-en="Simple Node.js library for interacting with FiveM servers.">FiveM sunucularıyla etkileşim için basit Node.js kütüphanesi.</p>
+          <span class="lang-badge">JavaScript</span>
+        </a>
+
+        <a href="https://github.com/Peyxw/vehicle-detection" target="_blank" rel="noopener" class="project-card">
+          <h3>Vehicle Detection</h3>
+          <p data-tr="YOLO ve SVM (OpenCV + HOG) ile araç tespiti pipeline'ı." data-en="Vehicle detection pipeline with YOLO and SVM (OpenCV + HOG).">YOLO ve SVM (OpenCV + HOG) ile araç tespiti pipeline'ı.</p>
+          <span class="lang-badge">Python</span>
+        </a>
+
+        <a href="https://github.com/Peyxw/Canli-Deprem-Haritasi" target="_blank" rel="noopener" class="project-card">
+          <h3 data-tr="Canlı Deprem Haritası" data-en="Live Earthquake Map">Canlı Deprem Haritası</h3>
+          <p data-tr="Türkiye üzerindeki depremleri canlı olarak izleyin." data-en="Track earthquakes over Turkey in real time.">Türkiye üzerindeki depremleri canlı olarak izleyin.</p>
+          <span class="lang-badge">HTML</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
+      <div class="contact-links">
+
+        <a href="mailto:eminnesatg@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          eminnesatg@gmail.com
+        </a>
+
+        <a href="https://github.com/mdaedalus" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          github.com/mdaedalus
+        </a>
+
+        <a href="https://github.com/Peyxw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          github.com/Peyxw
+        </a>
+
+        <a href="https://www.linkedin.com/in/emin-neşat-gürses-35723a284" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+
+        <a href="https://tabip.rf.gd" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          tabip.rf.gd
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p data-tr="© 2026 Emin Neşat Gürses" data-en="© 2026 Emin Neşat Gürses">© 2026 Emin Neşat Gürses</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function setLang(lang) {
+      // Update button states
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+      // Update all elements with data-tr / data-en
+      document.querySelectorAll('[data-tr]').forEach(function(el) {
+        var text = el.getAttribute('data-' + lang);
+        if (text) {
+          el.textContent = text;
+        }
+      });
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>
