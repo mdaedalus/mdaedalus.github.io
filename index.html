@@ -3,9 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emin Neşat Gürses — Portfolio</title>
+
+  <meta
+    name="description"
+    content="Emin Neşat Gürses — AI, Data ve HealthTech odaklı yazılım geliştirici."
+  >
+
+  <meta
+    name="keywords"
+    content="Emin Neşat Gürses, AI, Yapay Zeka, Data, HealthTech, Python, PyTorch, FastAPI, Software Developer"
+  >
+
+  <meta name="author" content="Emin Neşat Gürses">
+
+  <title>Emin Neşat Gürses — Software Developer</title>
+
   <style>
-    /* --- RESET & BASE --- */
+    /* ================================
+       RESET & BASE
+    ================================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -17,13 +34,22 @@
       --surface: #ffffff;
       --text: #1a1a1a;
       --text-secondary: #555555;
+      --text-muted: #888888;
       --accent: #2563eb;
       --accent-hover: #1d4ed8;
       --border: #e5e5e5;
       --tag-bg: #f0f0f0;
       --radius: 10px;
-      --max-width: 720px;
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 760px;
+
+      --font:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
     }
 
     html {
@@ -40,13 +66,21 @@
       padding: 0 1.25rem;
     }
 
+    a {
+      color: inherit;
+    }
+
     .container {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 3rem 0 4rem;
     }
 
-    /* --- LANGUAGE SWITCH --- */
+
+    /* ================================
+       LANGUAGE SWITCH
+    ================================= */
+
     .lang-switch {
       display: flex;
       justify-content: flex-end;
@@ -78,7 +112,11 @@
       color: var(--accent);
     }
 
-    /* --- HERO --- */
+
+    /* ================================
+       HERO
+    ================================= */
+
     .hero {
       margin-bottom: 3rem;
     }
@@ -87,13 +125,13 @@
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero .tagline {
       font-size: 1rem;
       color: var(--text-secondary);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.1rem;
     }
 
     .hero .location {
@@ -110,9 +148,13 @@
       flex-shrink: 0;
     }
 
-    /* --- SECTIONS --- */
+
+    /* ================================
+       SECTIONS
+    ================================= */
+
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.7rem;
     }
 
     h2 {
@@ -122,14 +164,64 @@
       letter-spacing: -0.01em;
     }
 
-    /* --- ABOUT --- */
+
+    /* ================================
+       ABOUT
+    ================================= */
+
     .about p {
       color: var(--text-secondary);
       font-size: 0.95rem;
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
-    /* --- SKILLS --- */
+
+    /* ================================
+       FOCUS BOX
+    ================================= */
+
+    .focus-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-top: 1.2rem;
+    }
+
+    .focus-box strong {
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .focus-box p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+
+    /* ================================
+       SKILLS
+    ================================= */
+
+    .skill-group {
+      margin-bottom: 1.3rem;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-title {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -146,11 +238,15 @@
       white-space: nowrap;
     }
 
-    /* --- EXPERIENCE --- */
+
+    /* ================================
+       EXPERIENCE
+    ================================= */
+
     .exp-item {
       display: flex;
       gap: 1rem;
-      padding: 0.9rem 0;
+      padding: 0.95rem 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -167,7 +263,7 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-secondary);
       flex-shrink: 0;
     }
@@ -196,13 +292,18 @@
     .exp-content .desc {
       font-size: 0.85rem;
       color: var(--text-secondary);
-      margin-top: 0.3rem;
+      margin-top: 0.35rem;
+      line-height: 1.6;
     }
 
-    /* --- PROJECTS --- */
+
+    /* ================================
+       PROJECTS
+    ================================= */
+
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
     }
 
@@ -213,7 +314,11 @@
       padding: 1.1rem;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -221,7 +326,8 @@
 
     .project-card:hover {
       border-color: var(--accent);
-      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+      transform: translateY(-2px);
     }
 
     .project-card h3 {
@@ -233,7 +339,7 @@
     .project-card p {
       font-size: 0.82rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.55;
       flex: 1;
     }
 
@@ -248,7 +354,65 @@
       align-self: flex-start;
     }
 
-    /* --- CONTACT --- */
+
+    /* ================================
+       FREELANCE
+    ================================= */
+
+    .freelance-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+
+    .freelance-intro {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .freelance-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+    }
+
+    .freelance-list li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding: 0.55rem 0.7rem;
+      background: var(--tag-bg);
+      border-radius: 7px;
+    }
+
+
+    /* ================================
+       INTERESTS
+    ================================= */
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .interest {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+
+    /* ================================
+       CONTACT
+    ================================= */
+
     .contact-links {
       display: flex;
       flex-direction: column;
@@ -281,7 +445,11 @@
       flex-shrink: 0;
     }
 
-    /* --- FOOTER --- */
+
+    /* ================================
+       FOOTER
+    ================================= */
+
     .footer {
       text-align: center;
       font-size: 0.8rem;
@@ -291,8 +459,12 @@
       border-top: 1px solid var(--border);
     }
 
-    /* --- RESPONSIVE --- */
-    @media (max-width: 480px) {
+
+    /* ================================
+       RESPONSIVE
+    ================================= */
+
+    @media (max-width: 600px) {
       body {
         padding: 0 1rem;
       }
@@ -302,241 +474,1009 @@
       }
 
       .hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.65rem;
       }
 
       .projects-grid {
         grid-template-columns: 1fr;
       }
 
+      .freelance-list {
+        grid-template-columns: 1fr;
+      }
+
       .exp-icon {
         width: 34px;
         height: 34px;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
       }
     }
 
-    /* --- UTIL --- */
+
+    /* ================================
+       UTIL
+    ================================= */
+
     .hidden {
       display: none !important;
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
-    <!-- LANGUAGE SWITCH -->
+    <!-- ================================
+         LANGUAGE SWITCH
+    ================================= -->
+
     <div class="lang-switch" role="group" aria-label="Language">
-      <button id="btn-tr" class="active" onclick="setLang('tr')">TR</button>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
+      <button id="btn-tr" class="active" onclick="setLang('tr')">
+        TR
+      </button>
+
+      <button id="btn-en" onclick="setLang('en')">
+        EN
+      </button>
     </div>
 
-    <!-- HERO -->
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
     <header class="hero">
+
       <h1>Emin Neşat Gürses</h1>
-      <p class="tagline" data-tr="Yazılım Geliştirici · Yapay Zeka, Veri Madenciliği & Kuantum" data-en="Software Developer · AI, Data Mining & Quantum">Yazılım Geliştirici · Yapay Zeka, Veri Madenciliği & Kuantum</p>
-      <p class="location">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span data-tr="Gümüşhane, Türkiye" data-en="Gümüşhane, Türkiye">Gümüşhane, Türkiye</span>
+
+      <p
+        class="tagline"
+        data-tr="Yazılım Geliştirici · Yapay Zeka, Veri & HealthTech"
+        data-en="Software Developer · AI, Data & HealthTech"
+      >
+        Yazılım Geliştirici · Yapay Zeka, Veri & HealthTech
       </p>
+
+      <p class="location">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+
+        <span
+          data-tr="Gümüşhane, Türkiye"
+          data-en="Gümüşhane, Türkiye"
+        >
+          Gümüşhane, Türkiye
+        </span>
+
+      </p>
+
     </header>
 
-    <!-- ABOUT -->
+
+    <!-- ================================
+         ABOUT
+    ================================= -->
+
     <section class="about">
-      <h2 data-tr="Hakkımda" data-en="About">Hakkımda</h2>
-      <p data-tr="Yapay zeka, veri madenciliği ve kuantum bilişim tutkunu. Tabip'in kurucusu — yapay zeka destekli bir sağlık teknolojisi projesi. Microsoft Learn Student Ambassador & T3 AI'LE gönüllüsü. Sadece kod yazmıyorum; arkasındaki bilimi anlamaya çalışıyorum. Disiplinler arası problem çözmeye ve yaşam boyu öğrenmeye tutkuluyum. En iyi çözümlerin birlikte öğrenip birlikte ürettiğimizde ortaya çıktığına inanıyorum."
-         data-en="AI, data mining, and quantum computing enthusiast. Founder of Tabip — an AI-powered health-tech project. Microsoft Learn Student Ambassador & T3 AI'LE Volunteer. I don't just write code; I strive to understand the science behind it. Passionate about interdisciplinary problem-solving and lifelong learning. I believe the best solutions emerge when we learn and build together.">
-        Yapay zeka, veri madenciliği ve kuantum bilişim tutkunu. Tabip'in kurucusu — yapay zeka destekli bir sağlık teknolojisi projesi. Microsoft Learn Student Ambassador & T3 AI'LE gönüllüsü. Sadece kod yazmıyorum; arkasındaki bilimi anlamaya çalışıyorum. Disiplinler arası problem çözmeye ve yaşam boyu öğrenmeye tutkuluyum. En iyi çözümlerin birlikte öğrenip birlikte ürettiğimizde ortaya çıktığına inanıyorum.
+
+      <h2
+        data-tr="Hakkımda"
+        data-en="About"
+      >
+        Hakkımda
+      </h2>
+
+      <p
+        data-tr="Yapay zeka, veri ve sağlık teknolojileri üzerine çalışan bir yazılım geliştiriciyim. Python tabanlı veri ve yapay zeka uygulamaları, API geliştirme ve açık kaynak projeler geliştiriyorum. Tabip'in kurucusu olarak sağlık verileri ve yapay zeka teknolojilerini bir araya getiren açık kaynak bir ekosistem oluşturuyorum."
+        data-en="I am a software developer working at the intersection of artificial intelligence, data and healthcare technology. I build Python-based data and AI applications, APIs and open-source projects. As the founder of Tabip, I am building an open-source ecosystem that brings healthcare data and AI technologies together."
+      >
+        Yapay zeka, veri ve sağlık teknolojileri üzerine çalışan bir yazılım
+        geliştiriciyim. Python tabanlı veri ve yapay zeka uygulamaları, API
+        geliştirme ve açık kaynak projeler geliştiriyorum. Tabip'in kurucusu
+        olarak sağlık verileri ve yapay zeka teknolojilerini bir araya getiren
+        açık kaynak bir ekosistem oluşturuyorum.
       </p>
-    </section>
 
-    <!-- SKILLS -->
-    <section>
-      <h2 data-tr="Yetenekler" data-en="Skills">Yetenekler</h2>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>Yapay Zeka / AI</li>
-        <li>Veri Madenciliği</li>
-        <li>Kuantum Bilişim</li>
-        <li>Flask</li>
-        <li>Node.js</li>
-        <li>PyTorch</li>
-        <li>OpenCV</li>
-        <li>MongoDB</li>
-        <li>Veri Analitiği</li>
-        <li>REST API</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section>
-      <h2 data-tr="Deneyim" data-en="Experience">Deneyim</h2>
+      <div class="focus-box">
 
-      <div class="exp-item">
-        <div class="exp-icon">T</div>
-        <div class="exp-content">
-          <h3 data-tr="Kurucu" data-en="Founder">Kurucu</h3>
-          <p class="org">Tabip</p>
-          <p class="dates">2025 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
-          <p class="desc" data-tr="Yapay zeka destekli sağlık teknolojisi projesi. Sentetik klinik veri setleri, API ve açık kaynak araçlar." data-en="AI-powered health-tech project. Synthetic clinical datasets, API, and open-source tools.">Yapay zeka destekli sağlık teknolojisi projesi. Sentetik klinik veri setleri, API ve açık kaynak araçlar.</p>
-        </div>
-      </div>
+        <strong
+          data-tr="Odak Alanım"
+          data-en="Current Focus"
+        >
+          Odak Alanım
+        </strong>
 
-      <div class="exp-item">
-        <div class="exp-icon">T3</div>
-        <div class="exp-content">
-          <h3 data-tr="Topluluk Gönüllüsü" data-en="Community Volunteer">Topluluk Gönüllüsü</h3>
-          <p class="org">T3 AI'LE</p>
-          <p class="dates">Şub 2024 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
-          <p class="desc" data-tr="Yapay Zeka ve Veri Madenciliği alanında gönüllü çalışmalar." data-en="Volunteer work in AI and Data Mining.">Yapay Zeka ve Veri Madenciliği alanında gönüllü çalışmalar.</p>
-        </div>
-      </div>
+        <p
+          data-tr="AI & Data Engineering → HealthTech. Bunun yanında gerçek problemlere yönelik web uygulamaları, API'ler, veri otomasyonu ve AI entegrasyonları geliştiriyorum."
+          data-en="AI & Data Engineering → HealthTech. I also build web applications, APIs, data automation solutions and AI integrations for real-world problems."
+        >
+          AI & Data Engineering → HealthTech. Bunun yanında gerçek problemlere
+          yönelik web uygulamaları, API'ler, veri otomasyonu ve AI
+          entegrasyonları geliştiriyorum.
+        </p>
 
-      <div class="exp-item">
-        <div class="exp-icon">T3</div>
-        <div class="exp-content">
-          <h3 data-tr="Gönüllü" data-en="Volunteer">Gönüllü</h3>
-          <p class="org">T3 Vakfı</p>
-          <p class="dates">Haz 2023 — <span data-tr="Devam ediyor" data-en="Present">Devam ediyor</span></p>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-icon">MS</div>
-        <div class="exp-content">
-          <h3 data-tr="Öğrenci Elçisi" data-en="Student Ambassador">Öğrenci Elçisi</h3>
-          <p class="org">Microsoft Learn Student Ambassadors</p>
-          <p class="dates">Eyl 2024 — Tem 2025</p>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-icon">PY</div>
-        <div class="exp-content">
-          <h3 data-tr="Geliştirme Gönüllüsü" data-en="Development Volunteer">Geliştirme Gönüllüsü</h3>
-          <p class="org">Python Developer</p>
-          <p class="dates">Mar 2020 — May 2021</p>
-          <p class="desc" data-tr="Yazılım Geliştirme ve Yapay Zeka." data-en="Software Development and AI.">Yazılım Geliştirme ve Yapay Zeka.</p>
-        </div>
       </div>
 
     </section>
 
-    <!-- PROJECTS -->
+
+    <!-- ================================
+         SKILLS
+    ================================= -->
+
     <section>
-      <h2 data-tr="Projeler" data-en="Projects">Projeler</h2>
+
+      <h2
+        data-tr="Teknolojiler"
+        data-en="Technologies"
+      >
+        Teknolojiler
+      </h2>
+
+
+      <!-- AI & DATA -->
+
+      <div class="skill-group">
+
+        <div
+          class="skill-group-title"
+          data-tr="AI & Veri"
+          data-en="AI & Data"
+        >
+          AI & Veri
+        </div>
+
+        <ul class="skills-list">
+
+          <li>Python</li>
+          <li>PyTorch</li>
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>OpenCV</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- BACKEND -->
+
+      <div class="skill-group">
+
+        <div
+          class="skill-group-title"
+          data-tr="Backend & Veri Tabanı"
+          data-en="Backend & Database"
+        >
+          Backend & Veri Tabanı
+        </div>
+
+        <ul class="skills-list">
+
+          <li>FastAPI</li>
+          <li>Flask</li>
+          <li>REST API</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
+          <li>SQL</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- WEB -->
+
+      <div class="skill-group">
+
+        <div
+          class="skill-group-title"
+          data-tr="Web & Araçlar"
+          data-en="Web & Tools"
+        >
+          Web & Araçlar
+        </div>
+
+        <ul class="skills-list">
+
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git</li>
+          <li>GitHub</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         EXPERIENCE
+    ================================= -->
+
+    <section>
+
+      <h2
+        data-tr="Deneyim & Topluluk"
+        data-en="Experience & Community"
+      >
+        Deneyim & Topluluk
+      </h2>
+
+
+      <!-- TABIP -->
+
+      <div class="exp-item">
+
+        <div class="exp-icon">
+          T
+        </div>
+
+        <div class="exp-content">
+
+          <h3
+            data-tr="Kurucu"
+            data-en="Founder"
+          >
+            Kurucu
+          </h3>
+
+          <p class="org">
+            Tabip
+          </p>
+
+          <p class="dates">
+            2025 —
+            <span
+              data-tr="Devam ediyor"
+              data-en="Present"
+            >
+              Devam ediyor
+            </span>
+          </p>
+
+          <p
+            class="desc"
+            data-tr="Sağlık verileri, açık kaynak veri setleri, API'ler ve yapay zeka uygulamaları üzerine geliştirilen HealthTech ekosistemi."
+            data-en="HealthTech ecosystem focused on healthcare data, open-source datasets, APIs and artificial intelligence applications."
+          >
+            Sağlık verileri, açık kaynak veri setleri, API'ler ve yapay zeka
+            uygulamaları üzerine geliştirilen HealthTech ekosistemi.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- T3 AI'LE -->
+
+      <div class="exp-item">
+
+        <div class="exp-icon">
+          T3
+        </div>
+
+        <div class="exp-content">
+
+          <h3
+            data-tr="Topluluk Gönüllüsü"
+            data-en="Community Volunteer"
+          >
+            Topluluk Gönüllüsü
+          </h3>
+
+          <p class="org">
+            T3 AI'LE
+          </p>
+
+          <p class="dates">
+            Şub 2024 —
+            <span
+              data-tr="Devam ediyor"
+              data-en="Present"
+            >
+              Devam ediyor
+            </span>
+          </p>
+
+          <p
+            class="desc"
+            data-tr="Yapay zeka ve veri odaklı topluluk çalışmalarına gönüllü katkı."
+            data-en="Volunteer contribution to AI and data-focused community activities."
+          >
+            Yapay zeka ve veri odaklı topluluk çalışmalarına gönüllü katkı.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- T3 VAKFI -->
+
+      <div class="exp-item">
+
+        <div class="exp-icon">
+          T3
+        </div>
+
+        <div class="exp-content">
+
+          <h3
+            data-tr="Gönüllü"
+            data-en="Volunteer"
+          >
+            Gönüllü
+          </h3>
+
+          <p class="org">
+            T3 Vakfı
+          </p>
+
+          <p class="dates">
+            Haz 2023 —
+            <span
+              data-tr="Devam ediyor"
+              data-en="Present"
+            >
+              Devam ediyor
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- MICROSOFT -->
+
+      <div class="exp-item">
+
+        <div class="exp-icon">
+          MS
+        </div>
+
+        <div class="exp-content">
+
+          <h3
+            data-tr="Öğrenci Elçisi"
+            data-en="Student Ambassador"
+          >
+            Öğrenci Elçisi
+          </h3>
+
+          <p class="org">
+            Microsoft Learn Student Ambassadors
+          </p>
+
+          <p class="dates">
+            Eyl 2024 — Tem 2025
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PYTHON -->
+
+      <div class="exp-item">
+
+        <div class="exp-icon">
+          PY
+        </div>
+
+        <div class="exp-content">
+
+          <h3
+            data-tr="Geliştirme Gönüllüsü"
+            data-en="Development Volunteer"
+          >
+            Geliştirme Gönüllüsü
+          </h3>
+
+          <p class="org">
+            Python Developer
+          </p>
+
+          <p class="dates">
+            Mar 2020 — May 2021
+          </p>
+
+          <p
+            class="desc"
+            data-tr="Yazılım geliştirme ve yapay zeka odaklı çalışmalar."
+            data-en="Software development and AI-focused work."
+          >
+            Yazılım geliştirme ve yapay zeka odaklı çalışmalar.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         FEATURED PROJECTS
+    ================================= -->
+
+    <section>
+
+      <h2
+        data-tr="Öne Çıkan Projeler"
+        data-en="Featured Projects"
+      >
+        Öne Çıkan Projeler
+      </h2>
+
+
       <div class="projects-grid">
 
-        <a href="https://github.com/mdaedalus/Earthquake-api" target="_blank" rel="noopener" class="project-card">
-          <h3>Earthquake API</h3>
-          <p data-tr="İki büyük Türk kaynağından deprem verilerini toplayan gerçek zamanlı Flask API." data-en="Real-time Flask API aggregating earthquake data from two major Turkish sources.">İki büyük Türk kaynağından deprem verilerini toplayan gerçek zamanlı Flask API.</p>
-          <span class="lang-badge">Python</span>
+
+        <!-- TABIP -->
+
+        <a
+          href="https://github.com/Tip-Atlasi-Projesi"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            🩺 Tabip
+          </h3>
+
+          <p
+            data-tr="Açık kaynak sağlık verileri, API'ler ve yapay zeka uygulamaları üzerine geliştirdiğim HealthTech ekosistemi."
+            data-en="Open-source HealthTech ecosystem focused on healthcare data, APIs and AI applications."
+          >
+            Açık kaynak sağlık verileri, API'ler ve yapay zeka uygulamaları
+            üzerine geliştirdiğim HealthTech ekosistemi.
+          </p>
+
+          <span class="lang-badge">
+            HealthTech
+          </span>
+
         </a>
 
-        <a href="https://github.com/mdaedalus/Fault-Lines-Api" target="_blank" rel="noopener" class="project-card">
-          <h3>Fault Lines API</h3>
-          <p data-tr="Jeolojik plaka ve fay zonu verilerini GeoJSON formatında sunan hafif Flask API." data-en="Lightweight Flask geospatial API serving geological plate and fault zone data in GeoJSON.">Jeolojik plaka ve fay zonu verilerini GeoJSON formatında sunan hafif Flask API.</p>
-          <span class="lang-badge">Python</span>
+
+        <!-- TABIP SYNTHETIC -->
+
+        <a
+          href="https://github.com/Tip-Atlasi-Projesi/tabip-sentetik"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            🧬 Tabip Synthetic
+          </h3>
+
+          <p
+            data-tr="Yapay zeka, LLM ve sağlık yazılımları için geliştirilen Türkçe sentetik hasta veri seti."
+            data-en="Synthetic Turkish patient dataset designed for AI, LLMs and healthcare software."
+          >
+            Yapay zeka, LLM ve sağlık yazılımları için geliştirilen Türkçe
+            sentetik hasta veri seti.
+          </p>
+
+          <span class="lang-badge">
+            Data
+          </span>
+
         </a>
 
-        <a href="https://github.com/mdaedalus/ejs-blog" target="_blank" rel="noopener" class="project-card">
-          <h3>EJS Blog</h3>
-          <p data-tr="Node.js, Express, EJS ve MongoDB ile geliştirilmiş tam özellikli blog platformu." data-en="Full-featured blog platform built with Node.js, Express, EJS, and MongoDB.">Node.js, Express, EJS ve MongoDB ile geliştirilmiş tam özellikli blog platformu.</p>
-          <span class="lang-badge">EJS</span>
+
+        <!-- EXAM SYSTEM -->
+
+        <a
+          href="https://github.com/mdaedalus/sinav-karma-sistemi"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            📅 Sınav Karma Sistemi
+          </h3>
+
+          <p
+            data-tr="Okullar için Excel veri aktarımı, otomatik salon dağıtımı ve PDF raporları sunan sınav yönetim sistemi."
+            data-en="School exam management system with Excel import, automatic room allocation and PDF reports."
+          >
+            Okullar için Excel veri aktarımı, otomatik salon dağıtımı ve PDF
+            raporları sunan sınav yönetim sistemi.
+          </p>
+
+          <span class="lang-badge">
+            Python
+          </span>
+
         </a>
 
-        <a href="https://github.com/mdaedalus/Neural-Networks-with-Python-and-Pytorch" target="_blank" rel="noopener" class="project-card">
-          <h3>Neural Networks</h3>
-          <p data-tr="PyTorch ile MNIST veri seti üzerinde el yazısı rakam sınıflandırması." data-en="Handwritten digit classification on MNIST dataset using PyTorch.">PyTorch ile MNIST veri seti üzerinde el yazısı rakam sınıflandırması.</p>
-          <span class="lang-badge">Python</span>
+
+        <!-- NEURAL NETWORKS -->
+
+        <a
+          href="https://github.com/mdaedalus/Neural-Networks-with-Python-and-Pytorch"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            🧠 Neural Networks
+          </h3>
+
+          <p
+            data-tr="PyTorch kullanılarak MNIST veri seti üzerinde geliştirilen temel sinir ağı uygulaması."
+            data-en="Basic neural network implementation using PyTorch on the MNIST dataset."
+          >
+            PyTorch kullanılarak MNIST veri seti üzerinde geliştirilen temel
+            sinir ağı uygulaması.
+          </p>
+
+          <span class="lang-badge">
+            PyTorch
+          </span>
+
         </a>
 
-        <a href="https://github.com/mdaedalus/Python-Blockchain" target="_blank" rel="noopener" class="project-card">
-          <h3>Python Blockchain</h3>
-          <p data-tr="Python ile yazılmış basit ve açıklayıcı bir blockchain prototipi." data-en="Simple yet illustrative blockchain prototype written in Python.">Python ile yazılmış basit ve açıklayıcı bir blockchain prototipi.</p>
-          <span class="lang-badge">Python</span>
+
+        <!-- EARTHQUAKE API -->
+
+        <a
+          href="https://github.com/mdaedalus/Earthquake-api"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            🌍 Earthquake API
+          </h3>
+
+          <p
+            data-tr="Deprem verilerini farklı kaynaklardan toplayarak API üzerinden sunan Python tabanlı veri servisi."
+            data-en="Python-based data service that aggregates earthquake data from multiple sources through an API."
+          >
+            Deprem verilerini farklı kaynaklardan toplayarak API üzerinden
+            sunan Python tabanlı veri servisi.
+          </p>
+
+          <span class="lang-badge">
+            Python
+          </span>
+
         </a>
 
-        <a href="https://github.com/mdaedalus/FivemApi" target="_blank" rel="noopener" class="project-card">
-          <h3>FiveM API</h3>
-          <p data-tr="FiveM sunucularıyla etkileşim için basit Node.js kütüphanesi." data-en="Simple Node.js library for interacting with FiveM servers.">FiveM sunucularıyla etkileşim için basit Node.js kütüphanesi.</p>
-          <span class="lang-badge">JavaScript</span>
+
+        <!-- FAULT LINES -->
+
+        <a
+          href="https://github.com/mdaedalus/Fault-Lines-Api"
+          target="_blank"
+          rel="noopener"
+          class="project-card"
+        >
+
+          <h3>
+            🗺️ Fault Lines API
+          </h3>
+
+          <p
+            data-tr="Jeolojik fay zonu verilerini GeoJSON formatında sunan Python tabanlı coğrafi veri API'si."
+            data-en="Python-based geospatial API serving geological fault zone data in GeoJSON format."
+          >
+            Jeolojik fay zonu verilerini GeoJSON formatında sunan Python tabanlı
+            coğrafi veri API'si.
+          </p>
+
+          <span class="lang-badge">
+            API
+          </span>
+
         </a>
 
-        <a href="https://github.com/Peyxw/vehicle-detection" target="_blank" rel="noopener" class="project-card">
-          <h3>Vehicle Detection</h3>
-          <p data-tr="YOLO ve SVM (OpenCV + HOG) ile araç tespiti pipeline'ı." data-en="Vehicle detection pipeline with YOLO and SVM (OpenCV + HOG).">YOLO ve SVM (OpenCV + HOG) ile araç tespiti pipeline'ı.</p>
-          <span class="lang-badge">Python</span>
-        </a>
-
-        <a href="https://github.com/Peyxw/Canli-Deprem-Haritasi" target="_blank" rel="noopener" class="project-card">
-          <h3 data-tr="Canlı Deprem Haritası" data-en="Live Earthquake Map">Canlı Deprem Haritası</h3>
-          <p data-tr="Türkiye üzerindeki depremleri canlı olarak izleyin." data-en="Track earthquakes over Turkey in real time.">Türkiye üzerindeki depremleri canlı olarak izleyin.</p>
-          <span class="lang-badge">HTML</span>
-        </a>
 
       </div>
+
     </section>
 
-    <!-- CONTACT -->
+
+    <!-- ================================
+         FREELANCE
+    ================================= -->
+
     <section>
-      <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
+
+      <h2
+        data-tr="Freelance Çalışmalar"
+        data-en="Freelance Services"
+      >
+        Freelance Çalışmalar
+      </h2>
+
+
+      <div class="freelance-box">
+
+        <p
+          class="freelance-intro"
+          data-tr="Gerçek problemlere yönelik yazılım çözümleri geliştiriyorum. Özellikle veri, backend ve yapay zekayı bir araya getiren uygulamalara odaklanıyorum."
+          data-en="I build software solutions for real-world problems, with a focus on applications combining data, backend systems and artificial intelligence."
+        >
+          Gerçek problemlere yönelik yazılım çözümleri geliştiriyorum.
+          Özellikle veri, backend ve yapay zekayı bir araya getiren
+          uygulamalara odaklanıyorum.
+        </p>
+
+
+        <ul class="freelance-list">
+
+          <li
+            data-tr="🌐 Web Uygulamaları"
+            data-en="🌐 Web Applications"
+          >
+            🌐 Web Uygulamaları
+          </li>
+
+          <li
+            data-tr="🔌 REST API Geliştirme"
+            data-en="🔌 REST API Development"
+          >
+            🔌 REST API Geliştirme
+          </li>
+
+          <li
+            data-tr="📊 Veri İşleme & Otomasyon"
+            data-en="📊 Data Processing & Automation"
+          >
+            📊 Veri İşleme & Otomasyon
+          </li>
+
+          <li
+            data-tr="🤖 AI / LLM Entegrasyonları"
+            data-en="🤖 AI / LLM Integrations"
+          >
+            🤖 AI / LLM Entegrasyonları
+          </li>
+
+          <li
+            data-tr="🗄️ Veritabanı Sistemleri"
+            data-en="🗄️ Database Systems"
+          >
+            🗄️ Veritabanı Sistemleri
+          </li>
+
+          <li
+            data-tr="⚙️ Yönetim Panelleri & Otomasyon"
+            data-en="⚙️ Admin Panels & Automation"
+          >
+            ⚙️ Yönetim Panelleri & Otomasyon
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         INTERESTS
+    ================================= -->
+
+    <section>
+
+      <h2
+        data-tr="İlgi Alanları"
+        data-en="Interests"
+      >
+        İlgi Alanları
+      </h2>
+
+
+      <div class="interests">
+
+        <span class="interest">
+          Artificial Intelligence
+        </span>
+
+        <span class="interest">
+          Data Engineering
+        </span>
+
+        <span class="interest">
+          Machine Learning
+        </span>
+
+        <span class="interest">
+          Deep Learning
+        </span>
+
+        <span class="interest">
+          HealthTech
+        </span>
+
+        <span class="interest">
+          Open Source
+        </span>
+
+        <span class="interest">
+          LLM & RAG
+        </span>
+
+        <span class="interest">
+          Computer Vision
+        </span>
+
+        <span class="interest">
+          Quantum Computing
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         CONTACT
+    ================================= -->
+
+    <section>
+
+      <h2
+        data-tr="İletişim"
+        data-en="Contact"
+      >
+        İletişim
+      </h2>
+
+
       <div class="contact-links">
 
+
+        <!-- EMAIL -->
+
         <a href="mailto:eminnesatg@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-10 7L2 7"/>
+          </svg>
+
           eminnesatg@gmail.com
+
         </a>
 
-        <a href="https://github.com/mdaedalus" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+
+        <!-- GITHUB -->
+
+        <a
+          href="https://github.com/mdaedalus"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+
           github.com/mdaedalus
+
         </a>
 
-        <a href="https://github.com/Peyxw" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          github.com/Peyxw
-        </a>
 
-        <a href="https://www.linkedin.com/in/emin-neşat-gürses-35723a284" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <!-- LINKEDIN -->
+
+        <a
+          href="https://www.linkedin.com/in/emin-neşat-gürses-35723a284"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+
           LinkedIn
+
         </a>
 
-        <a href="https://tabip.rf.gd" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+
+        <!-- TABIP -->
+
+        <a
+          href="https://tabip.rf.gd"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+
           tabip.rf.gd
+
+        </a>
+
+
+        <!-- PORTFOLIO -->
+
+        <a
+          href="https://mdaedalus.github.io"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+
+          Portfolio
+
         </a>
 
       </div>
+
     </section>
 
-    <!-- FOOTER -->
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
     <footer class="footer">
-      <p data-tr="© 2026 Emin Neşat Gürses" data-en="© 2026 Emin Neşat Gürses">© 2026 Emin Neşat Gürses</p>
+
+      <p
+        data-tr="© 2026 Emin Neşat Gürses"
+        data-en="© 2026 Emin Neşat Gürses"
+      >
+        © 2026 Emin Neşat Gürses
+      </p>
+
     </footer>
 
   </div>
 
+
+  <!-- ================================
+       LANGUAGE SCRIPT
+  ================================= -->
+
   <script>
+
     function setLang(lang) {
-      // Update button states
-      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-      // Update all elements with data-tr / data-en
-      document.querySelectorAll('[data-tr]').forEach(function(el) {
-        var text = el.getAttribute('data-' + lang);
-        if (text) {
-          el.textContent = text;
-        }
-      });
+      /* Update button states */
 
-      // Update html lang attribute
+      document
+        .getElementById("btn-tr")
+        .classList
+        .toggle("active", lang === "tr");
+
+      document
+        .getElementById("btn-en")
+        .classList
+        .toggle("active", lang === "en");
+
+
+      /* Update translated elements */
+
+      document
+        .querySelectorAll("[data-tr]")
+        .forEach(function (el) {
+
+          const text =
+            el.getAttribute("data-" + lang);
+
+          if (text) {
+            el.textContent = text;
+          }
+
+        });
+
+
+      /* Update HTML language */
+
       document.documentElement.lang = lang;
+
+
+      /* Remember language */
+
+      try {
+        localStorage.setItem("preferredLanguage", lang);
+      } catch (e) {
+        /* Ignore storage errors */
+      }
+
     }
+
+
+    /* Load saved language */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      let savedLanguage = "tr";
+
+      try {
+
+        savedLanguage =
+          localStorage.getItem("preferredLanguage") || "tr";
+
+      } catch (e) {
+
+        savedLanguage = "tr";
+
+      }
+
+      setLang(savedLanguage);
+
+    });
+
   </script>
 
 </body>
